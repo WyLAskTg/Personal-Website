@@ -4,88 +4,80 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Ruoyi Wang is an undergraduate student at the University of Waterloo interested in empirical software engineering, developer tools, and research.">
-  <title>Ruoyi Wang | University of Waterloo</title>
+  <meta name="description" content="Ruoyi Wang — undergraduate student at the University of Waterloo, interested in empirical software engineering and software systems.">
+  <title>Ruoyi Wang | Academic Homepage</title>
   <style>
-    :root { color-scheme: light; --ink: #111; --muted: #555; --line: #dedede; }
+    :root { color-scheme: light; --ink: #111; --soft: #444; --rule: #b9b9b9; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { margin: 0; background: #fff; color: var(--ink); font: 16px/1.72 Arial, Helvetica, sans-serif; }
-    a { color: inherit; text-underline-offset: 3px; }
+    body { margin: 0; background: #fff; color: var(--ink); font: 16px/1.45 Georgia, "Times New Roman", serif; }
+    a { color: #111; text-decoration: underline; text-underline-offset: 2px; }
     a:hover { color: #555; }
-    .container { width: min(100% - 48px, 930px); margin: 0 auto; }
-    .site-header { position: sticky; top: 0; z-index: 10; background: #fff; border-bottom: 1px solid var(--line); }
-    .site-header .container { min-height: 66px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
-    .site-name { font-family: Georgia, "Times New Roman", serif; font-size: 19px; font-weight: bold; text-decoration: none; white-space: nowrap; }
-    .site-nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 22px; }
-    .site-nav a { color: #333; font-size: 13px; text-decoration: none; }
-    .site-nav a:hover { color: #111; text-decoration: underline; }
-    main section { scroll-margin-top: 84px; }
-    .hero { padding: 92px 0 88px; }
-    .eyebrow, .section-label, .item-meta, .date, .card-kind { font: 12px/1.4 "Courier New", Courier, monospace; letter-spacing: .055em; }
-    .eyebrow, .section-label { color: var(--muted); text-transform: uppercase; }
+    .page { width: min(100% - 40px, 1020px); margin: 0 auto; }
+    .nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0; margin: 20px 0 0; border-bottom: 1px solid var(--rule); font-family: Arial, Helvetica, sans-serif; }
+    .nav a { min-width: 112px; padding: 8px 15px; text-align: center; text-decoration: none; font-size: 14px; }
+    .nav a:hover, .nav a:focus-visible { background: #111; color: #fff; }
+    .nav a:first-child { background: #111; color: #fff; }
+    .intro { display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 35px; padding: 35px 0 28px; }
+    .identity { border-right: 1px solid #d3d3d3; padding-right: 29px; }
     h1, h2, h3, p { margin-top: 0; }
-    h1 { margin: 20px 0 13px; font: normal clamp(45px, 7vw, 68px)/1.12 Georgia, "Times New Roman", serif; letter-spacing: -.045em; }
-    .hero-subtitle { margin-bottom: 22px; font-size: 19px; font-weight: 600; }
-    .hero-summary { max-width: 650px; margin-bottom: 29px; color: #333; font-size: 17px; }
-    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
-    .action { display: inline-block; min-height: 42px; padding: 8px 16px; border: 1px solid #111; border-radius: 3px; text-decoration: none; font-size: 14px; font-weight: 600; }
-    .action.primary { background: #111; color: #fff; }
-    .action.primary:hover { background: #333; }
-    .action:hover { background: #f5f5f5; color: #111; }
-    section.content { padding: 51px 0 58px; border-top: 1px solid var(--line); }
-    .section-label { margin-bottom: 9px; }
-    h2 { margin-bottom: 23px; font: bold 27px/1.25 Arial, Helvetica, sans-serif; letter-spacing: -.025em; }
-    h3 { margin-bottom: 7px; font: bold 18px/1.35 Arial, Helvetica, sans-serif; }
-    p { margin-bottom: 15px; }
-    .prose { max-width: 740px; }
-    .prose p:last-child { margin-bottom: 0; }
-    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-    .card { min-height: 225px; padding: 24px; border: 1px solid var(--line); border-radius: 4px; }
-    .card-kind { color: var(--muted); text-transform: uppercase; }
-    .card h3 { margin-top: 15px; }
-    .card p { margin-bottom: 13px; color: #444; font-size: 15px; }
-    .card-link { font-size: 14px; font-weight: 600; }
-    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 17px; }
-    .tags span { padding: 2px 8px; border: 1px solid var(--line); border-radius: 2px; color: #444; font: 11px/1.5 "Courier New", Courier, monospace; }
-    .experience-item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 22px; padding: 22px 0; border-top: 1px solid #e9e9e9; }
-    .experience-item:first-of-type { border-top: 0; padding-top: 0; }
-    .experience-item h3 { margin-bottom: 4px; }
-    .experience-item .date { color: var(--muted); text-align: right; white-space: nowrap; }
-    .experience-item .details { grid-column: 1 / -1; max-width: 770px; }
-    .experience-item .details p { margin: 0; color: #444; font-size: 15px; }
-    .question-list { max-width: 780px; margin: 0; padding-left: 20px; }
-    .question-list li { margin-bottom: 9px; padding-left: 4px; }
-    .education-line { display: flex; justify-content: space-between; gap: 18px; }
-    .education-line p { margin: 0; color: #444; }
-    footer { padding: 26px 0 36px; border-top: 1px solid var(--line); color: #666; font-size: 13px; }
-    footer .container { display: flex; justify-content: space-between; gap: 18px; }
-    @media (max-width: 700px) {
-      .container { width: min(100% - 36px, 930px); }
-      .site-header .container { padding: 14px 0; display: block; }
-      .site-nav { margin-top: 7px; justify-content: flex-start; gap: 7px 16px; }
-      .hero { padding: 63px 0 64px; }
-      section.content { padding: 40px 0 46px; }
-      .cards { grid-template-columns: 1fr; }
-      .card { min-height: 0; }
-      .experience-item { grid-template-columns: 1fr; }
-      .experience-item .date { text-align: left; }
-      .education-line, footer .container { display: block; }
+    h1 { margin: 0 0 5px; font: bold 30px/1.15 Arial, Helvetica, sans-serif; }
+    .role { margin: 0 0 15px; font-size: 16px; }
+    .identity p { margin-bottom: 8px; }
+    .identity-links { margin-top: 18px; padding-top: 14px; border-top: 1px solid #ddd; display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+    .intro-copy p { margin: 0 0 11px; }
+    .intro-copy p:last-child { margin-bottom: 0; }
+    .intro-copy strong { font-weight: 700; }
+    .notice { margin-top: 13px; border: 1px solid var(--rule); padding: 10px 12px; font-size: 14px; }
+    section { padding: 12px 0 22px; border-top: 1px solid var(--rule); scroll-margin-top: 20px; }
+    h2 { margin: 2px 0 14px; font: bold 23px/1.2 Arial, Helvetica, sans-serif; }
+    h3 { margin: 0 0 3px; font: bold 16px/1.3 Arial, Helvetica, sans-serif; }
+    .dense-list { margin: 0; padding-left: 22px; }
+    .dense-list li { margin-bottom: 7px; }
+    .row { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 20px; margin-bottom: 17px; }
+    .row:last-child { margin-bottom: 0; }
+    .row-label { color: var(--soft); font: 14px/1.4 Arial, Helvetica, sans-serif; }
+    .row p { margin: 0 0 5px; }
+    .row ul { margin: 4px 0 0; padding-left: 19px; }
+    .row li { margin-bottom: 3px; }
+    .muted { color: var(--soft); }
+    .project { margin: 0 0 15px; }
+    .project:last-child { margin-bottom: 0; }
+    .project p { margin: 0 0 5px; }
+    .project .links { font-size: 14px; }
+    .compact { margin: 0 0 6px; }
+    .compact:last-child { margin-bottom: 0; }
+    footer { padding: 18px 0 30px; border-top: 1px solid var(--rule); color: var(--soft); font: 13px Arial, Helvetica, sans-serif; }
+    footer .page { display: flex; justify-content: space-between; gap: 18px; }
+    @media (max-width: 680px) {
+      .page { width: min(100% - 28px, 1020px); }
+      .nav { justify-content: flex-start; margin-top: 10px; }
+      .nav a { min-width: 0; padding: 9px 10px; }
+      .intro { grid-template-columns: 1fr; gap: 18px; padding-top: 25px; }
+      .identity { border-right: 0; border-bottom: 1px solid #d3d3d3; padding-right: 0; padding-bottom: 13px; }
+      .identity-links { margin-top: 10px; padding-top: 10px; }
+      .row { grid-template-columns: 1fr; gap: 3px; }
+      footer .page { display: block; }
+      footer span { display: block; margin-bottom: 5px; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
 <body>
-  <header class="site-header"><div class="container"><a class="site-name" href="#top">Ruoyi Wang</a><nav class="site-nav" aria-label="Main navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a></nav></div></header>
-  <main class="container" id="top">
-    <div class="hero"><div class="eyebrow">Undergraduate student · University of Waterloo</div><h1>Ruoyi Wang</h1><p class="hero-subtitle">Software engineering and empirical research</p><p class="hero-summary">I am interested in how software is built, reused, and maintained. My current research examines reuse patterns in AI agent skills, and I enjoy building tools that support real workflows.</p><div class="actions"><a class="action primary" href="#experience">View experience</a><a class="action" href="#projects">Projects</a><a class="action" href="https://github.com/WyLAskTg" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
-    <section class="content" id="projects"><div class="section-label">Selected work</div><h2>Projects</h2><div class="cards"><article class="card"><div class="card-kind">Web application · Live</div><h3>Research Application Tracker</h3><p>A private application for organizing research outreach by term, documenting contacts and conversations, and tracking follow ups.</p><a class="card-link" href="https://ratracker.app" target="_blank" rel="noopener noreferrer">Visit project ↗</a><div class="tags"><span>React</span><span>Cloudflare Workers</span><span>D1</span></div></article><article class="card"><div class="card-kind">Personal project · In progress</div><h3>InternFlow</h3><p>An early stage tool for organizing internship applications, from form input to application records and a reviewable interface.</p><div class="tags"><span>TypeScript</span><span>Web UI</span></div></article></div></section>
-    <section class="content" id="about"><div class="section-label">Background</div><h2>About</h2><div class="prose"><p>I am an undergraduate student at the University of Waterloo. My work combines practical web development with an interest in empirical software engineering. I am building a foundation in computer science and mathematics while learning how to frame and investigate research questions.</p></div></section>
-    <section class="content" id="experience"><div class="section-label">Research work</div><h2>Experience</h2><div class="experience-item"><div><h3>UR2PhD Research Program</h3><div class="item-meta">GitSkills dataset</div></div><div class="date">Current</div><div class="details"><p>Studying skill reuse across GitHub repositories, including identical content, repository history, and how agent skills change over time.</p></div></div><div class="experience-item"><div><h3>The University of Hong Kong</h3><div class="item-meta">Professor Ho Chen's group · Remote</div></div><div class="date">Incoming</div><div class="details"><p>Joining the group remotely and working with Huaien Zhang. Possible responsibilities include compiler testing and analysis of GitHub issues.</p></div></div></section>
-    <section class="content" id="research"><div class="section-label">Current interests</div><h2>Research</h2><div class="prose"><p>I am interested in AI agent skills as a software artifact and in methods for studying their reuse and quality. Questions I am exploring include:</p><ul class="question-list"><li>How do skills spread and evolve across repositories?</li><li>What can repository history tell us beyond exact content matches?</li><li>Which measurable signals are useful when evaluating skill quality?</li></ul></div></section>
-    <section class="content" id="education"><div class="section-label">Education</div><h2>University of Waterloo</h2><div class="education-line"><p>Undergraduate student</p><p>Waterloo, Canada</p></div></section>
-    <section class="content" id="contact"><div class="section-label">Get in touch</div><h2>Contact</h2><p>Find my code and current projects on <a href="https://github.com/WyLAskTg" target="_blank" rel="noopener noreferrer">GitHub ↗</a>.</p></section>
-  </main>
-  <footer><div class="container"><span>© 2026 Ruoyi Wang</span><span>Last updated October 2026</span></div></footer>
+  <div class="page">
+    <nav class="nav" aria-label="Main navigation"><a href="#home">Home</a><a href="#updates">Updates</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#background">Background</a></nav>
+    <main id="home">
+      <div class="intro">
+        <div class="identity"><h1>Ruoyi Wang</h1><p class="role">Undergraduate student</p><p>University of Waterloo<br>Waterloo, Canada</p><div class="identity-links"><a href="https://github.com/WyLAskTg" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://ratracker.app" target="_blank" rel="noopener noreferrer">RA Tracker</a></div></div>
+        <div class="intro-copy"><p>I am an undergraduate student at the University of Waterloo interested in <strong>empirical software engineering, developer tools, and software testing</strong>. I study how software artifacts are created, reused, and maintained, and I build tools for research workflows.</p><p>Through <strong>UR2PhD</strong>, I am currently examining reuse patterns in the <strong>GitSkills</strong> dataset. I will also join <strong>Professor Ho Chen's group at the University of Hong Kong</strong> remotely, working with <strong>Huaien Zhang</strong>. That work may involve compiler testing and analyzing GitHub issues.</p><div class="notice"><strong>Current focus:</strong> AI agent skill reuse, repository history, and empirical methods for studying software evolution.</div></div>
+      </div>
+      <section id="updates"><h2>Updates</h2><ul class="dense-list"><li><strong>Oct 2026:</strong> Studying skill reuse in the GitSkills dataset through UR2PhD.</li><li><strong>Upcoming:</strong> Joining a research group at the University of Hong Kong remotely; possible work includes compiler testing and GitHub issue analysis.</li></ul></section>
+      <section id="research"><h2>Research Interests</h2><p>My current research centers on the reuse of AI agent skills across public repositories. I am interested in what exact content matches can show, what repository history adds, and how the quality of a skill could be evaluated with meaningful measures.</p><ul class="dense-list"><li><strong>Skill reuse and evolution:</strong> identifying identical content across repositories and studying how copies change over time.</li><li><strong>Evidence of origin:</strong> using timestamps and commit history carefully; identical files alone do not establish who copied from whom.</li><li><strong>Software quality:</strong> considering multiple observable signals rather than treating popularity or copy count as a complete measure of usefulness.</li></ul><p class="compact"><strong>Dataset reference:</strong> <a href="https://arxiv.org/abs/2608.10906" target="_blank" rel="noopener noreferrer">GitSkills: A Dataset of Agent Skills on GitHub</a>.</p></section>
+      <section id="experience"><h2>Research Experience</h2><div class="row"><div class="row-label">Current</div><div><h3>UR2PhD Research Program</h3><p><em>GitSkills dataset · software engineering research</em></p><ul><li>Investigating patterns of agent skill reuse across GitHub repositories.</li><li>Examining questions about duplicate content, repository history, and measures of skill quality.</li></ul></div></div><div class="row"><div class="row-label">Incoming · Remote</div><div><h3>The University of Hong Kong</h3><p><em>Professor Ho Chen's group; working with Huaien Zhang</em></p><ul><li>Preparing to begin remote research with the group.</li><li>Potential responsibilities include compiler testing and analysis of GitHub issues; the precise project scope is still being defined.</li></ul></div></div></section>
+      <section id="projects"><h2>Selected Projects</h2><div class="project"><h3>Research Application Tracker</h3><p>A private, account-based application for organizing research outreach. Users can group applications by term, record professor details and contact history, receive follow-up reminders, and import Excel files.</p><p><strong>Implementation:</strong> React / Vinext, Cloudflare Workers, D1, Drizzle ORM, and Web Crypto-based sessions.</p><p class="links"><a href="https://ratracker.app" target="_blank" rel="noopener noreferrer">Live site</a> · <a href="https://github.com/WyLAskTg/RA-Tracker" target="_blank" rel="noopener noreferrer">Source code</a></p></div><div class="project"><h3>InternFlow <span class="muted">(in progress)</span></h3><p>An early stage TypeScript tool for organizing internship applications, including form input, application records, and an interface for reviewing them.</p></div></section>
+      <section id="background"><h2>Background &amp; Tools</h2><p class="compact"><strong>Education:</strong> Undergraduate student, University of Waterloo.</p><p class="compact"><strong>Tools used in projects:</strong> TypeScript, JavaScript, React, Cloudflare Workers, D1, Drizzle ORM, Web Crypto.</p><p class="compact"><strong>Research areas:</strong> empirical software engineering, agent skills, software evolution, and software testing.</p></section>
+    </main>
+  </div>
+  <footer><div class="page"><span>© 2026 Ruoyi Wang</span><span>Last updated October 2026</span></div></footer>
 </body>
 </html>
