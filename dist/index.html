@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Ruoyi Wang — undergraduate student at the University of Waterloo, interested in empirical software engineering and software systems.">
+  <meta name="description" content="Ruoyi Wang — University of Waterloo Computer Science '30, interested in AI coding agents and software engineering.">
   <title>Ruoyi Wang | Academic Homepage</title>
   <style>
     :root { color-scheme: light; --ink: #111; --soft: #444; --rule: #b9b9b9; }
@@ -28,7 +28,6 @@
     .intro-copy p { margin: 0 0 11px; }
     .intro-copy p:last-child { margin-bottom: 0; }
     .intro-copy strong { font-weight: 700; }
-    .notice { margin-top: 13px; border: 1px solid var(--rule); padding: 10px 12px; font-size: 14px; }
     section { padding: 12px 0 22px; border-top: 1px solid var(--rule); scroll-margin-top: 20px; }
     h2 { margin: 2px 0 14px; font: bold 23px/1.2 Arial, Helvetica, sans-serif; }
     h3 { margin: 0 0 3px; font: bold 16px/1.3 Arial, Helvetica, sans-serif; }
@@ -40,11 +39,6 @@
     .row p { margin: 0 0 5px; }
     .row ul { margin: 4px 0 0; padding-left: 19px; }
     .row li { margin-bottom: 3px; }
-    .muted { color: var(--soft); }
-    .project { margin: 0 0 15px; }
-    .project:last-child { margin-bottom: 0; }
-    .project p { margin: 0 0 5px; }
-    .project .links { font-size: 14px; }
     .compact { margin: 0 0 6px; }
     .compact:last-child { margin-bottom: 0; }
     footer { padding: 18px 0 30px; border-top: 1px solid var(--rule); color: var(--soft); font: 13px Arial, Helvetica, sans-serif; }
@@ -65,17 +59,16 @@
 </head>
 <body>
   <div class="page">
-    <nav class="nav" aria-label="Main navigation"><a href="#home">Home</a><a href="#updates">Updates</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#background">Background</a></nav>
+    <nav class="nav" aria-label="Main navigation"><a href="#home">Home</a><a href="#updates">Updates</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#background">Background</a></nav>
     <main id="home">
       <div class="intro">
-        <div class="identity"><h1>Ruoyi Wang</h1><p class="role">Undergraduate student</p><p>University of Waterloo<br>Waterloo, Canada</p><div class="identity-links"><a href="https://github.com/WyLAskTg" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://ratracker.app" target="_blank" rel="noopener noreferrer">RA Tracker</a></div></div>
-        <div class="intro-copy"><p>I am an undergraduate student at the University of Waterloo interested in <strong>empirical software engineering, developer tools, and software testing</strong>. I study how software artifacts are created, reused, and maintained, and I build tools for research workflows.</p><p>Through <strong>UR2PhD</strong>, I am currently examining reuse patterns in the <strong>GitSkills</strong> dataset. I will also join <strong>Professor Ho Chen's group at the University of Hong Kong</strong> remotely, working with <strong>Huaien Zhang</strong>. That work may involve compiler testing and analyzing GitHub issues.</p><div class="notice"><strong>Current focus:</strong> AI agent skill reuse, repository history, and empirical methods for studying software evolution.</div></div>
+        <div class="identity"><h1>Ruoyi Wang</h1><p class="role">Computer Science '30</p><p>University of Waterloo<br>Waterloo, Canada</p><div class="identity-links"><a href="https://github.com/WyLAskTg" target="_blank" rel="noopener noreferrer">GitHub</a></div></div>
+        <div class="intro-copy"><p>I am a <strong>Computer Science student at the University of Waterloo, Class of 2030</strong>. My interests lie broadly in <strong>AI coding agents and software engineering</strong>, especially the ways AI can support developers and how software systems can be made more reliable.</p><p>Through <strong>UR2PhD</strong>, I am currently examining reuse patterns in the <strong>GitSkills</strong> dataset. I will also join <strong>Professor Ho Chen's group at the University of Hong Kong</strong> remotely, working with <strong>Huaien Zhang</strong>. That work may involve compiler testing and analyzing GitHub issues.</p></div>
       </div>
       <section id="updates"><h2>Updates</h2><ul class="dense-list"><li><strong>Oct 2026:</strong> Studying skill reuse in the GitSkills dataset through UR2PhD.</li><li><strong>Upcoming:</strong> Joining a research group at the University of Hong Kong remotely; possible work includes compiler testing and GitHub issue analysis.</li></ul></section>
-      <section id="research"><h2>Research Interests</h2><p>My current research centers on the reuse of AI agent skills across public repositories. I am interested in what exact content matches can show, what repository history adds, and how the quality of a skill could be evaluated with meaningful measures.</p><ul class="dense-list"><li><strong>Skill reuse and evolution:</strong> identifying identical content across repositories and studying how copies change over time.</li><li><strong>Evidence of origin:</strong> using timestamps and commit history carefully; identical files alone do not establish who copied from whom.</li><li><strong>Software quality:</strong> considering multiple observable signals rather than treating popularity or copy count as a complete measure of usefulness.</li></ul><p class="compact"><strong>Dataset reference:</strong> <a href="https://arxiv.org/abs/2608.10906" target="_blank" rel="noopener noreferrer">GitSkills: A Dataset of Agent Skills on GitHub</a>.</p></section>
-      <section id="experience"><h2>Research Experience</h2><div class="row"><div class="row-label">Current</div><div><h3>UR2PhD Research Program</h3><p><em>GitSkills dataset · software engineering research</em></p><ul><li>Investigating patterns of agent skill reuse across GitHub repositories.</li><li>Examining questions about duplicate content, repository history, and measures of skill quality.</li></ul></div></div><div class="row"><div class="row-label">Incoming · Remote</div><div><h3>The University of Hong Kong</h3><p><em>Professor Ho Chen's group; working with Huaien Zhang</em></p><ul><li>Preparing to begin remote research with the group.</li><li>Potential responsibilities include compiler testing and analysis of GitHub issues; the precise project scope is still being defined.</li></ul></div></div></section>
-      <section id="projects"><h2>Selected Projects</h2><div class="project"><h3>Research Application Tracker</h3><p>A private, account-based application for organizing research outreach. Users can group applications by term, record professor details and contact history, receive follow-up reminders, and import Excel files.</p><p><strong>Implementation:</strong> React / Vinext, Cloudflare Workers, D1, Drizzle ORM, and Web Crypto-based sessions.</p><p class="links"><a href="https://ratracker.app" target="_blank" rel="noopener noreferrer">Live site</a> · <a href="https://github.com/WyLAskTg/RA-Tracker" target="_blank" rel="noopener noreferrer">Source code</a></p></div><div class="project"><h3>InternFlow <span class="muted">(in progress)</span></h3><p>An early stage TypeScript tool for organizing internship applications, including form input, application records, and an interface for reviewing them.</p></div></section>
-      <section id="background"><h2>Background &amp; Tools</h2><p class="compact"><strong>Education:</strong> Undergraduate student, University of Waterloo.</p><p class="compact"><strong>Tools used in projects:</strong> TypeScript, JavaScript, React, Cloudflare Workers, D1, Drizzle ORM, Web Crypto.</p><p class="compact"><strong>Research areas:</strong> empirical software engineering, agent skills, software evolution, and software testing.</p></section>
+      <section id="research"><h2>Research Interests</h2><p>I am broadly interested in AI for software engineering. In particular, I want to understand how AI coding agents can assist with real development tasks, how their reliability can be evaluated, and how software testing and program analysis can improve the tools developers use.</p><ul class="dense-list"><li>AI coding agents and developer workflows</li><li>Software engineering and AI for software development</li><li>Software testing, program analysis, and reliability</li></ul></section>
+      <section id="experience"><h2>Research Experience</h2><div class="row"><div class="row-label">Current</div><div><h3>UR2PhD Research Program</h3><p><em>GitSkills dataset · software engineering research</em></p><ul><li>Investigating patterns of agent skill reuse across GitHub repositories.</li><li>Examining questions about duplicate content, repository history, and measures of skill quality.</li></ul><p class="compact"><strong>Dataset reference:</strong> <a href="https://arxiv.org/abs/2608.10906" target="_blank" rel="noopener noreferrer">GitSkills: A Dataset of Agent Skills on GitHub</a>.</p></div></div><div class="row"><div class="row-label">Incoming · Remote</div><div><h3>The University of Hong Kong</h3><p><em>Professor Ho Chen's group; working with Huaien Zhang</em></p><ul><li>Preparing to begin remote research with the group.</li><li>Potential responsibilities include compiler testing and analysis of GitHub issues; the precise project scope is still being defined.</li></ul></div></div></section>
+      <section id="background"><h2>Background &amp; Tools</h2><p class="compact"><strong>Education:</strong> Computer Science, University of Waterloo (Class of 2030).</p><p class="compact"><strong>Technical experience:</strong> TypeScript, JavaScript, React, Cloudflare Workers, D1, Drizzle ORM, Web Crypto.</p></section>
     </main>
   </div>
   <footer><div class="page"><span>© 2026 Ruoyi Wang</span><span>Last updated October 2026</span></div></footer>
